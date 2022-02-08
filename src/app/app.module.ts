@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { NoteComponent } from './note/note.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,6 +13,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ],
     imports: [
         BrowserModule,
+        FormsModule,
         ReactiveFormsModule
     ],
     providers: [],
