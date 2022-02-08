@@ -66,7 +66,7 @@ export class AppComponent {
      * @returns true/false
      */
     showNote(note: Note): boolean {
-        const name = note.name.toLowerCase();
+        const name = (note && note.name) ? note.name.toLowerCase() : '';
         return !this.searchValue || (!!this.searchValue && name.includes(this.searchValue.toLowerCase()))
     }
 
