@@ -1,0 +1,49 @@
+ol {
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+}
+
+li {
+    margin-top: 40px;
+}
+
+form {
+    background-color: #EFF2F7;
+    padding: 10px 20px;
+}
+
+textarea,
+input[type=text] {
+    border: 1px solid #C2CDDD;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font: inherit;
+    line-height: inherit;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+textarea {
+    height: 52px;
+    margin-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    resize: vertical;
+}
+
+::placeholder {
+    color: #CACFD5;
+}
+
+input[type=submit] {
+    background-color: #D3135A;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    float: right;
+    line-height: 35px;
+    min-width: 90px;
+    padding: 0;
+    text-align: center;
+}

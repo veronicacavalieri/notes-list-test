@@ -1,0 +1,21 @@
+
+<article
+    [ngClass]="{
+        'trimmed': showTrimmed,
+        'you': 1 === data.userId
+    }"
+    class="note"
+>
+    <footer>
+        <div class='self-clear'>
+            <strong class='author'> {{ data.name }} </strong>
+            <time class='pub-date'> {{ (data.date || 0) | date:"dd/MM/yy - HH:mm:ss" }} </time>
+        </div>
+        <img src="assets/img/mistery-man.png" class='avatar' [alt]="data.name + '\'s avatar'" />
+    </footer>
+    <div class='entry-content'>
+        <p #noteBoxRef class='note-body'> {{ data.message }} </p>
+
+        <a *ngIf="showTrimmed" href='#' class='read-more' (click)="expandNote($event)">Read More</a>
+    </div>
+</article>

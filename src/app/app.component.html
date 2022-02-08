@@ -1,0 +1,20 @@
+
+<form class='self-clear'>
+    <input type='text'
+        (keyup)="onSearch($event)"
+        placeholder='Search author' />
+</form>
+<ol *ngFor="let note of notes">
+    <li *ngIf="showNote(note)">
+        <note [data]="note"></note>
+    </li>
+</ol>
+
+<form class='self-clear' [formGroup]="noteForm" (ngSubmit)="addNote($event)">
+    <textarea
+        placeholder='Enter note about the process'
+        formControlName="note"
+    ></textarea>
+
+    <input type='submit' value='Publish' />
+</form>
