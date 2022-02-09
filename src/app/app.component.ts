@@ -15,8 +15,6 @@ export class AppComponent {
 
     notes: Note[] = otherPeople;
 
-    localNotes: Note[];
-
     searchValue: string;
 
     constructor(
@@ -40,6 +38,10 @@ export class AppComponent {
      */
     addNote(event) {
         event.preventDefault();
+
+        if (!this.noteForm.controls.note.value) {
+            return;
+        }
 
         const newNote: Note = {
             userId: 1,

@@ -11,7 +11,11 @@
             <strong class='author'> {{ data.name }} </strong>
             <time class='pub-date'> {{ (data.date || 0) | date:"dd/MM/yy - HH:mm:ss" }} </time>
         </div>
-        <img src="assets/img/mistery-man.png" class='avatar' [alt]="data.name + '\'s avatar'" />
+        <img
+            [src]="data.image || 'assets/img/mistery-man.png'"
+            class='avatar'
+            [alt]="data.name + '\'s avatar'"
+        />
     </footer>
     <div class='entry-content'>
         <p #noteBoxRef class='note-body'> {{ data.message }} </p>
